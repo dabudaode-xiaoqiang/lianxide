@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id='ul'>
+        <li>我是第1个儿子</li>
+        <li>我是第2个儿子</li>
+        <li>我是第3个儿子</li>
+        <li>我是第4个儿子</li>
+        <li>我是第5个儿子</li>
+    </ul>
+     <div id="box">
+        <button id="zengjia">增加</button>
+        <button id="remove">删除</button>
+        <button id="xiugai">修改</button>
+        <button id="chakan">查看</button>
+     </div>
+   
+    <script>
+        let box=document.getElementById('box');
+
+        // let lis = document.getElementsByTagName('li');
+        // let ul = document.getElementById('ul');
+        let zengjia=document.getElementById('zengjia');
+        let remove=document.getElementById('remove');
+        let xiugai=document.getElementById('xiugai');
+        let chakan=document.getElementById('chakan');
+        box.onclick=function(e){
+           e=e||window.event;
+           let val= e.target.innerHTML;
+           switch (val) {
+               case '增加':
+                   console.log('增加');
+                   break;
+           
+              case '删除':
+                  console.log('删除');
+                  break;
+              case '修改':
+                  console.log('修改');
+                  break;
+              case '查看':
+                  console.log('查看');
+                  break;
+           }
+        }
+        //方法一
+        //    for (let i = 0 ; i<lis.length; i++ ){
+        //     console.log(i);
+        //     console.log(lis[i].innerHTML);   
+        //    }
+        //方法二
+        // for (let i = 0; i < lis.length; i++) {
+        //     lis[i].onclick = function (e) {
+        //         e.target
+        //         console.log(e.target);
+        //         console.log(e.target.innerHTML);
+        //     }
+        // }
+        //方法三
+        // ul.onclick=function(e){
+        //     e=e||window.event
+        //     console.log(e.target);
+        //     console.log(e.target.innerHTML);
+        // }
+        //方法四
+        // for (let i = 0 ; i<lis.length ; i++ ){
+        //     lis[i].onclick=function(){
+        //         console.log(this);
+        //         console.log(this.innerHTML);
+        //     }
+        // }
+        //方法五
+        // for (let i = 0; i < lis.length; i++) {
+        //     (function (j) {
+        //         lis[j].onclick = function () {
+        //             console.log(j);
+        //             console.log(lis[j].innerHTML);
+        //         }
+        //     })(i)
+        // }
+    </script>
+</body>
+
+</html>

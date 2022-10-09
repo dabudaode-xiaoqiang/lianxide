@@ -1,0 +1,167 @@
+=
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1180;
+            height: 510;
+            background: url(./images/4.jpg) 0 174px no-repeat;
+            position: relative;
+            margin: 0 auto;
+
+        }
+
+        .box>ul {
+            position: absolute;
+            margin-top: 241px;
+            height: 44px;
+            margin-left: 120px;
+            text-align: center;
+            line-height: 44px;
+        }
+
+        ul>li {
+            width: 154px;
+            height: 44px;
+            float: left;
+            list-style: none;
+            font-size: 18px;
+        }
+
+        li>a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .lis {
+
+            background-color: #fff;
+        }
+
+        .lis>a {
+            color: #81c0a1;
+        }
+
+        .box1 {
+            position: absolute;
+            top: 285px;
+            width: 100%;
+            height: 225px;
+            border: 1px solid #81c0a1;
+            border-top: 0;
+        }
+        
+
+        .box1>div {
+            display: none;
+        }
+
+        .box1>div {
+            box-sizing: border-box;
+
+            margin-top: 30px;
+            padding: 30px;
+        }
+
+        .box1>.active {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="lis"><a href="#">最新</a></li>
+            <li><a href="#">萌新上路</a></li>
+            <li><a href="#">式神御魂</a></li>
+            <li><a href="#">秘闻副本</a></li>
+            <li><a href="#">斗技阵容</a></li>
+        </ul>
+        <div class="box1">
+            <div class="active">
+                【斗技】SP红叶斗技体系I红食流莽上8段
+                作者：Prince班崎
+            </div>
+            <div>
+                【新手】魂土40S低配萌新阵容
+                作者：槐夏三十
+            </div>
+            <div>
+                【式神】SR粉婆婆机制全解&实战测评
+                作者：嘤嘤井
+            </div>
+            <div>
+                【玩法】【寝肥合战】正式服阵容
+                作者：蜃彩流
+            </div>
+            <div>
+                【斗技】2022崽战攻略第2期——伏地魔2.2（崽战特别版），高胜率冲分，常见阵容全方位反打~
+                作者：靠脸混饭
+            </div>
+        </div>
+    </div>
+    <!-- <select name="city" id="city" size="5" style="width: 200px;">
+        <option value="0">北京</option>
+        <option value="1" selected >天津</option>
+        <option value="2">河北</option>
+        <option value="3">河南</option>
+        <option value="4">山东</option>
+        <option value="5">山西</option>
+        <option value="6">上海</option>
+        <option value="7">黑龙江</option>
+        <option value="8">陕西</option>
+        <option value="9">沈阳</option>
+        <option value="10">吉林</option>
+    </select>
+    <br><br>
+    <button>点击</button>
+    <div calss='box' id="div" title="盒子">哈哈哈哈</div> -->
+
+    <script>
+        // let opt = document.getElementsByTagName('option');
+        // let but=document.querySelector('button');
+        
+        // let i=1;
+        // but.onclick=()=>{
+        //     i++;
+        //     if(i>10){
+        //         i=0;
+        //     }
+        //     opt[i].selected=true;
+        // }
+        
+
+
+
+        
+
+        let lili = document.querySelectorAll("ul>li");
+        console.log(lili);
+        let divs=document.querySelectorAll(".box1>div");
+        console.log(divs);
+
+        for (let i = 0; i < lili.length; i++) {
+            lili[i].onmouseover = function () {
+                for (let j = 0; j < lili.length; j++) {
+                    lili[j].className = '';
+                    divs[j].className='';
+                }
+                lili[i].className = 'lis';
+                divs[i].className="active";
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
